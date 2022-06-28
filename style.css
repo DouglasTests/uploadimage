@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: texto;
+    src: url(ArlonSemiBold.ttf);}
+
+body{
+    font-family: texto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#55244d ;
+    flex-direction: column;
+    user-select: none;
+}
+.face{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #ffcc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.face::before{
+    content: '';
+    position: absolute;
+    top: 180px;
+    width: 150px;
+    height: 70px;
+    background: #b57700;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    transition: 0.3s;
+}
+.face:hover::before{
+    top: 210px;
+    width: 150px;
+    height: 20px;
+    background: #b57700;
+    border-radius: 20px;
+}
+.eyes{
+    position: relative;
+    top: -40px;
+    display: flex;
+}
+.eyes .eye{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: block;
+    background: #fff;
+    margin: 0 15px;
+    border-radius: 50%;
+}
+.eyes .eye::before{
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 25px;
+   transform: translate(-60%,-50%);
+   width: 40px;
+   height: 40px;
+   background: #333;
+   border-radius: 50%;
+}
+
+.principal{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.445);
+    left:20px;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 10px;    
+}
+.imagenarea{
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    position: absolute;
+    border-radius: 10px;
+}
+
+h1{
+    transform: translate(0, 3px);
+    margin: auto;
+    padding: 0;
+    color: aliceblue;
+    user-select: none; 
+    font-size: 20px;
+    text-align: center;
+}
+.areabottom{
+    width: 200px;
+    height: 60px;
+    margin-top: 0px;
+    border-radius: 10px;
+    display: flex;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.253);
+   
+}
+.bottom{
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    transition: 0.3s;
+    margin: auto; 
+}
+.areabottom:hover{
+    background-color: rgba(0, 8, 8, 0.5);
+    transition: 0.2s;
+    width: 230px;
+}
+input{
+    position: absolute;
+    opacity: 0;
+    display: none;
+}
+#separacion{
+    width: 100%;
+    height: 10px;
+}
